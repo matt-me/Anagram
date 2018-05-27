@@ -6,7 +6,7 @@ import java.util.TreeMap;
 import java.nio.file.*;
 public class AnagramMaker {
 	public static void main(String args[]) {
-		Path fileToRead = FileSystems.getDefault().getPath("words.txt");
+		Path fileToRead = FileSystems.getDefault().getPath("common_words.txt");
 		TreeMap<Character, ArrayList<String>> dictionary = new TreeMap<>();
 		Scanner lineScanner = null;
 		try {
@@ -22,7 +22,7 @@ public class AnagramMaker {
 			String nextLine = lineScanner.nextLine();
 			char startingChar = nextLine.charAt(0);
 			if (dictionary.get(startingChar) == null) {
-				dictionary.put(startingChar, new ArrayList<String>());
+				dictionary.put(startingChar, new ArrayList<>());
 			}
 			if (nextLine.length() > 1) {
 				dictionary.get(startingChar).add(nextLine);
@@ -82,7 +82,7 @@ public class AnagramMaker {
 					}
 				}
 			}
-			if (topLevel) {
+			if (topLevel) { // if we are on the top level of recursion
 				System.out.print(c);
 				dictionary.put(c, new ArrayList<String>());
 			}
