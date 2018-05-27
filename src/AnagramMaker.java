@@ -6,7 +6,7 @@ import java.util.TreeMap;
 import java.nio.file.*;
 public class AnagramMaker {
 	public static void main(String args[]) {
-		Path fileToRead = FileSystems.getDefault().getPath("enable1.txt");
+		Path fileToRead = FileSystems.getDefault().getPath("words.txt");
 		TreeMap<Character, ArrayList<String>> dictionary = new TreeMap<>();
 		Scanner lineScanner = null;
 		try {
