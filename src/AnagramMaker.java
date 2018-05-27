@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.io.IOException;
 import java.util.Scanner;
@@ -6,7 +5,7 @@ import java.util.TreeMap;
 import java.nio.file.*;
 public class AnagramMaker {
 	public static void main(String args[]) {
-		Path fileToRead = FileSystems.getDefault().getPath("common_words.txt");
+		Path fileToRead = FileSystems.getDefault().getPath("words.txt");
 		TreeMap<Character, ArrayList<String>> dictionary = new TreeMap<>();
 		Scanner lineScanner = null;
 		try {
@@ -35,7 +34,7 @@ public class AnagramMaker {
 		int numberOfLines = Integer.parseInt(scan.nextLine());
 		for (int i = 0; i <= numberOfLines - 1; i++) {
 			String nextLine = scan.nextLine();
-			nextLine = nextLine.replaceAll("[^/a-zA-Z]", "");
+			nextLine = nextLine.replaceAll("[^/a-zA-Z]", ""); // get rid of non-alpha characters
 			System.out.println("Checking for anagrams...");
 			System.out.print("Loading bar: ");
 			
