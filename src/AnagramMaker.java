@@ -48,6 +48,7 @@ public class AnagramMaker {
 		}
 		scan.close();
 	}
+
 	public static ArrayList<String> makeAnagrams(String userword, TreeMap<Character, ArrayList<String>> dictionary, boolean topLevel) {
 		ArrayList<String> anagrams = new ArrayList<String>();
 		for (Character c: userword.toCharArray()) {
